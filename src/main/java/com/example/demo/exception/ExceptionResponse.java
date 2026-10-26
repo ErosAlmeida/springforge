@@ -1,4 +1,5 @@
 package com.example.demo.exception;
 
-public class ExceptionResponse {
-}
+import java.util.Date;
+
+public record ExceptionResponse(Date timestamp, String message, String datails) {}
