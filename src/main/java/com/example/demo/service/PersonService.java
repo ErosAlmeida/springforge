@@ -1,8 +1,11 @@
+
 package com.example.demo.service;
+
 import com.example.demo.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
@@ -50,5 +53,23 @@ public class PersonService {
         person.setGender("Male");
 
         return person;
+    }
+
+    public Person create(Person person) {
+        logger.info("Creating a new Person: {}", person);
+
+        person.setId(counter.incrementAndGet());
+
+        return person;
+    }
+
+    public Person update(Person person) {
+        logger.info("Updating a Person: {}", person);
+
+        return person;
+    }
+
+    public void delete(String id) {
+        logger.info("Deleting a Person with id: {}", id);
     }
 }
