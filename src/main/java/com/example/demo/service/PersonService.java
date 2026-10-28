@@ -1,21 +1,21 @@
 
 package com.example.demo.service;
 
+import com.example.demo.controllers.TestLogController;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.model.Person;
 import com.example.demo.repository.PersonRepository;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 public class PersonService {
 
-    private static final Logger logger =
-            LoggerFactory.getLogger(PersonService.class);
+    private java.util.logging.Logger logger = (Logger) LoggerFactory.getLogger(TestLogController.class.getName());
 
     @Autowired
     private PersonRepository repository;
