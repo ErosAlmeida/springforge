@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.data.dto.PersonDTO;
+import com.example.demo.data.dto.v1.PersonDTO;
 import com.example.demo.model.Person;
 import com.example.demo.unitetests.mapper.MockPerson;
 import org.junit.jupiter.api.BeforeEach;

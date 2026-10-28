@@ -1,6 +1,6 @@
 package com.example.demo.unitetests.mapper;
 
-import com.example.demo.data.dto.PersonDTO;
+import com.example.demo.data.dto.v1.PersonDTO;
 import com.example.demo.model.Person;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
 
 package com.example.demo.controllers;
 
-import com.example.demo.data.dto.PersonDTO;
-import com.example.demo.model.Person;
+import com.example.demo.data.dto.v1.PersonDTO;
+import com.example.demo.data.dto.v2.PersonDTOV2;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -37,6 +37,15 @@ public class PersonController {
     )
     public PersonDTO create(@RequestBody PersonDTO person) {
         return service.create(person);
+    }
+
+    @PostMapping(
+            value = "/v2",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public PersonDTO create(@RequestBody PersonDTOV2 person) {
+        return service.createv2(person);
     }
 
     @PutMapping(
