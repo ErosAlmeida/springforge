@@ -5,14 +5,11 @@ import com.example.demo.data.dto.v2.PersonDTOV2;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.model.Person;
 import com.example.demo.repository.PersonRepository;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-
 import static com.example.demo.mapper.ObjectMapper.parseListObjects;
 import static com.example.demo.mapper.ObjectMapper.parseObject;
 
